@@ -3,7 +3,9 @@ CC = gcc
 CFLAGS = -Wall -Werror -Wextra -g
 RM = rm -f
 
-SRCS = main.c
+SRCS = 	main.c \
+		parsing.c utils.c \
+		initializator.c \
 
 OBJS = $(SRCS:.c=.o)
 
