@@ -6,7 +6,9 @@ RM = rm -f
 SRCS = 	main.c \
 		parsing.c utils.c \
 		initializator.c \
-
+		routine.c monitor.c \
+		threads.c \
+		
 OBJS = $(SRCS:.c=.o)
 
 LIBFT = libft/libft.a

@@ -13,8 +13,18 @@
 #include "philosopher.h"
 
 int	main(int argc, char **argv)
-{
+{	
 	if (ft_parsing(argc, argv))
 		return (0);
+	
+	t_program		program;
+	t_philo			philos[PHILO_MAX];
+	pthread_mutex_t	forks[PHILO_MAX];
+
+	init_program(&program, philos);
+	init_forks(forks, ft_atoi(argv[1]));
+	init_philos(philos, &program, forks, argv);
+	thread_create(&program, forks);
+	mutex_destroy(NULL, &program, forks);
 	return (0);
 }
