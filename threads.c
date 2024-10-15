@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   threads.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/15 16:32:33 by fneri             #+#    #+#             */
+/*   Updated: 2024/10/15 16:39:04 by fneri            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "philosopher.h"
 
 void	*philo_routine(void *pointer)
@@ -51,4 +63,3 @@ int	dead_check(t_philo *philo)
 	pthread_mutex_unlock(philo->lock_dead);
 	return (0);
 }
-

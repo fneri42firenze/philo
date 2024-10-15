@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   monitor.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/15 16:31:35 by fneri             #+#    #+#             */
+/*   Updated: 2024/10/15 16:38:50 by fneri            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "philosopher.h"
 
 void	print_message(char *str, t_philo *philo, int id)
@@ -74,7 +86,10 @@ void	*monitor(void *pointer)
 
 	philos = (t_philo *)pointer;
 	while (1)
+	{
+		usleep(1);
 		if (check_if_dead(philos) == 1 || check_if_all_ate(philos) == 1)
 			break ;
+	}
 	return (pointer);
 }

@@ -6,7 +6,7 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 14:20:42 by fneri             #+#    #+#             */
-/*   Updated: 2024/09/10 19:43:58 by fneri            ###   ########.fr       */
+/*   Updated: 2024/10/15 16:36:05 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ typedef struct s_program
 int		ft_parsing(int argc, char **argv);
 void	init_input(t_philo *philo, char **argv);
 void	init_philos(t_philo *philos, t_program *program, pthread_mutex_t *forks,
-		char **argv);
+			char **argv);
 void	init_forks(pthread_mutex_t *forks, int philo_num);
 void	init_program(t_program *program, t_philo *philos);
 size_t	get_current_time(void);
