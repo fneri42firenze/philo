@@ -6,7 +6,7 @@
 /*   By: fneri <fneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 16:31:20 by fneri             #+#    #+#             */
-/*   Updated: 2024/10/15 16:31:23 by fneri            ###   ########.fr       */
+/*   Updated: 2024/10/22 16:29:14 by fneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	think(t_philo *philo)
 {
+	if (philo->num_of_philos % 2 != 0)
+		ft_usleep(5);
 	print_message("is thinking", philo, philo->philo_id);
 }
 
